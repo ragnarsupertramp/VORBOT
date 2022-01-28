@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<robot name="vorcarm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find vorcarm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find vorcarm_description)/urdf/vorcarm.trans" />
+<xacro:include filename="$(find vorcarm_description)/urdf/vorcarm.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006472255599327793 0.07285966954348783 -0.016705155570983798"/>
+    <mass value="4.653642617434571"/>
+    <inertia ixx="0.035664" ixy="-0.0" ixz="0.0" iyy="0.045352" iyz="0.0" izz="0.023149"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VOR1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0012198506600670025 0.04547181366823108 -0.024349672758017176"/>
+    <mass value="0.990508490511616"/>
+    <inertia ixx="0.004463" ixy="0.000101" ixz="0.000396" iyy="0.005914" iyz="-0.000259" izz="0.004051"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.006472 -0.132177 0.016705"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.006472 -0.132177 0.016705"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VOR2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04859101570287613 0.10124732213787074 -4.685166305758159e-06"/>
+    <mass value="0.764954694560743"/>
+    <inertia ixx="0.00625" ixy="-7.2e-05" ixz="-0.0" iyy="0.002297" iyz="-0.0" izz="0.006685"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.044528 -0.220177 -0.018295"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.044528 -0.220177 -0.018295"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VOR3_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.04311848179022122 0.03514233271320294 0.00019341729401236088"/>
+    <mass value="0.3802084789471969"/>
+    <inertia ixx="0.001345" ixy="1e-06" ixz="0.0" iyy="0.001357" iyz="8e-05" izz="0.000789"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.040528 -0.470177 -0.018295"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.040528 -0.470177 -0.018295"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VOR4_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.06320146334283841 0.016234160338142012 0.6614467730909659"/>
+    <mass value="0.2852327395048785"/>
+    <inertia ixx="0.000958" ixy="-0.0" ixz="1e-06" iyy="0.001193" iyz="6e-06" izz="0.000578"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.060823 -0.48265 0.476883"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.060823 -0.48265 0.476883"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VOR5_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03729758429239918 8.985175270348478e-05 0.04408937253432382"/>
+    <mass value="0.3816299390540977"/>
+    <inertia ixx="0.000507" ixy="-0.0" ixz="1e-06" iyy="0.000606" iyz="1e-06" izz="0.000386"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.041472 -0.500177 -0.265795"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.041472 -0.500177 -0.265795"/>
+    <geometry>
+      <mesh filename="package://vorcarm_description/meshes/VOR5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.006472 0.132177 -0.016705"/>
+  <parent link="base_link"/>
+  <child link="VOR1_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="0.051 0.088 0.035"/>
+  <parent link="VOR1_1"/>
+  <child link="VOR2_1"/>
+  <axis xyz="-1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.004 0.25 0.0"/>
+  <parent link="VOR2_1"/>
+  <child link="VOR3_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="0.020295 0.012473 -0.495178"/>
+  <parent link="VOR3_1"/>
+  <child link="VOR4_1"/>
+  <axis xyz="-0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.102295 0.017527 0.742678"/>
+  <parent link="VOR4_1"/>
+  <child link="VOR5_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+</robot>
